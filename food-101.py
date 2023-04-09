@@ -26,7 +26,7 @@ CLASS_NAMES = os.listdir("food-101/images")
 IMG_SIZE = [216, 216]
 BATCH_SIZE = 32
 
-training = tf.keras.utils.image_dataset_from_directory("food-101/images",
+training = tf.keras.preprocessing.image_dataset_from_directory("food-101/images",
                                                        class_names=CLASS_NAMES,
                                                        label_mode="int",
                                                        image_size=IMG_SIZE,
@@ -35,7 +35,7 @@ training = tf.keras.utils.image_dataset_from_directory("food-101/images",
                                                        validation_split=0.25,
                                                        subset="training",
                                                        batch_size=None) 
-validation = tf.keras.utils.image_dataset_from_directory("food-101/images",
+validation = tf.keras.preprocessing.image_dataset_from_directory("food-101/images",
                                                        class_names=CLASS_NAMES,
                                                        label_mode="int",
                                                        image_size=IMG_SIZE,
